@@ -1,0 +1,29 @@
+.mainbanner{
+  text-align: center;
+  background-color: rgba(236,242,253,255);
+  height: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.titletext{
+  border-style: solid;
+  font-family: 'Victor Mono', monospace;
+  width: 70%;
+}
+h1{
+  font-size: 40px;
+}
+.aboutsec{
+  font-family: 'Victor Mono', monospace;
+}
+.mainpage{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.mainheader{
+  color: rgba(0,65,165,255);
+}
