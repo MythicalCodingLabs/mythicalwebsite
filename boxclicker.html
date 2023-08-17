@@ -1,0 +1,261 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mythicallabs" data-description="Support me on Buy me a coffee!" data-message="Help support our development" data-color="#0b78ee" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
+    <script>
+      function loadAll(){
+boxPoints = 0
+cps = 0
+cpsps = 0
+employees = 0
+cpspsCostINT = 99999999
+cpspsCostDIS = 100000
+document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: "+cps
+document.getElementById("cpspsPriceDIS").innerHTML = "Cost: "+cpspsCostDIS
+document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+employeePriceDIS = 1000
+employeePriceINT = 999
+clickerPriceDIS = 100
+clickerPriceINT = 99
+ascendPriceDIS = 100000000
+factoryPriceDIS = 3000
+factoryPriceINT = 2999
+document.getElementById("clickerPriceDIS").innerHTML = "Cost: "+clickerPriceDIS
+document.getElementById("employeePriceDIS").innerHTML = "Cost: "+employeePriceDIS
+document.getElementById("ascendPriceDIS").innerHTML = "Cost: "+ascendPriceDIS
+document.getElementById("factoryPriceDIS").innerHTML = "Cost: "+factoryPriceDIS
+
+}
+function addBoxPoint(){
+  boxPoints ++
+  document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+}
+function buyClicker(){
+  if (boxPoints > clickerPriceINT ){
+    cps ++
+    boxPoints = boxPoints-clickerPriceDIS;
+     
+    document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+    document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: " +cps
+    clickerPriceDIS = clickerPriceDIS + 100
+    clickerPriceINT = clickerPriceINT + 100
+    document.getElementById("clickerPriceDIS").innerHTML = "Cost: "+clickerPriceDIS
+  }
+}
+const interval = setInterval(function() {
+   boxPoints = boxPoints+cps
+   document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+ }, 1000);
+ const interval1 = setInterval(function() {
+   cps = cps + cpsps
+   document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: "+cps
+ }, 1000);
+ const interval2 = setInterval(function() {
+   cps = cps + cpsps
+   document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: "+box
+ }, 1000);
+
+function buyCpsps(){
+  if (boxPoints > cpspsCostINT){
+    cpsps ++
+    boxPoints = boxPoints-cpspsCostDIS;
+     
+    document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+    document.getElementById("cpspsDIS").innerHTML = "Clicks Per Second Per Second: " +cpsps
+    cpspsCostDIS = cpspsCostDIS + 100000
+    cpspsCostINT = cpspsCostINT + 100000
+    document.getElementById("cpspsCostDIS").innerHTML = "Cost: "+cpspsCostDIS
+  }
+}
+function buyEmployee(){
+  if (boxPoints > employeePriceINT ){
+    cps = cps+10
+    boxPoints = boxPoints-employeePriceDIS;
+     
+    document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+boxPoints
+    document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: " +cps
+    employeePriceDIS = employeePriceDIS + 500
+    employeePriceINT = employeePriceINT + 500
+    document.getElementById("employeePriceDIS").innerHTML = "Cost: "+employeePriceDIS
+  }
+}
+var factoryBought = 0;
+function buyFactory(){
+  if (boxPoints > factoryPriceINT){
+    cps = cps + 100
+    boxPoints = boxPoints-factoryPriceDIS;
+    document.getElementById("boxpointsDIS").innerHTML = "Box Points: "+ boxPoints
+    document.getElementById("clickspersecDIS").innerHTML = "Clicks Per Second: " + cps
+    factoryPriceDIS = factoryPriceDIS + 1000 * factoryBought
+    factoryPriceINT = factoryPriceINT + 1000 * factoryBought
+    document.getElementById("factoryPriceDIS").innerHTML = "Cost: "+factoryPriceDIS
+    factoryBought++
+  }
+}
+function buyAscend(){
+  window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+}
+      </script>
+      <style>
+
+ .boxToClick{
+   margin: auto;
+background-color: palegoldenrod;
+border: 3px inset black;
+border-radius: 15px;
+height: 100px;
+width: 100px;
+}
+  .boxToClickAnamation{
+background-color: palegoldenrod;
+border: 3px inset black;
+border-radius: 15px;
+height: 80px;
+width: 80px;
+}
+
+ .store{
+margin: auto;
+background-color: lightgreen;
+border: 3px inset black;
+border-radius: 15px;
+height: 75px;
+width: 300px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ .store:hover{
+   margin: auto;
+   background-color: rgb(170, 250, 172);
+border: 3px inset black;
+border-radius: 15px;
+height: 75px;
+width: 300px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ .savegame{
+   background-color: #4445E3;
+border: 3px inset black;
+border-radius: 15px;
+height: 55px;
+width: 100px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ .savegame:hover{
+   background-color: #5783FA;
+border: 3px inset black;
+border-radius: 15px;
+height: 55px;
+width: 100px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+  .storeemp{
+    margin: auto;
+background-color: lightgreen;
+border: 3px inset black;
+border-radius: 15px;
+height: 90px;
+width: 300px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ .storeemp:hover{
+   margin: auto;
+   background-color: rgb(170, 250, 172);
+border: 3px inset black;
+border-radius: 15px;
+height: 90px;
+width: 300px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ .ascend{
+   background-color: #FA1304;
+border: 3px inset black;
+border-radius: 15px;
+height: 50px;
+width: 200px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+  .ascend:hover{
+   background-color: #FA382A;
+border: 3px inset black;
+border-radius: 15px;
+height: 50px;
+width: 200px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+ html{
+   background-image: url("https://wallpaperaccess.com/full/2464565.jpg");
+border-radius: 15px;
+padding: 3px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+ }
+        </style>
+  </head>
+
+  <body onload="loadAll()">
+        <!--Navbar Stuff-->
+     <script>
+  function mainprojects(){
+    window.location.href = "projects.html";
+  }
+  </script>
+    <div class="navbar">
+      <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="mainprojects()">Projects 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://idlefactory.fun">Idle Factory Tycoon</a>
+      <a href="newsgen.html">News Gen</a>
+      <a href="boxclicker.html">Box Clicker</a>
+    </div>
+  </div> 
+</ul>
+</div>
+<!--End of navbar stuff-->
+    <div class="page">
+    <h1>Click the box to get box points!</h1>
+<p id="boxpointsDIS"></p>
+<p id="clickspersecDIS"></p>
+<p id="cpspsDIS"></p>
+  <img src="https://www.pngall.com/wp-content/uploads/5/Cardboard-Box-Transparent.png" height="200" margin="auto" onclick="addBoxPoint()">
+<br>
+<h2>Store</h2>
+<div class="store" onclick="buyClicker()">
+  <p>Buy a box cliker to click the box for you</p><p id="clickerPriceDIS"></p>
+  </div>
+  <br>
+  <div class="storeemp" onclick="buyEmployee()"><br>Buy a employee to make 10 boxes per second<p id="employeePriceDIS"></p></div>
+  <br>
+  <div class="store" onclick="buyFactory()"><br>Buy a box factory to produce boxes<p id="factoryPriceDIS"></p></div>
+  <br>
+  <div class="store" onclick="buyCpsps()"><br>Clicks Per Second, Per Second<p id="cpspsPriceDIS"></p></div>
+  <br>
+  <div class="ascend" onclick="buyAscend()">Ascend<p id="ascendPriceDIS"></p></div>
+    </div>
+  </body>
+</html>
