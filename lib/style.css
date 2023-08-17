@@ -17,9 +17,6 @@
 h1{
   font-size: 40px;
 }
-.aboutsec{
-  font-family: 'Victor Mono', monospace;
-}
 .mainpage{
   padding-left: 20%;
   padding-right: 20%;
@@ -27,3 +24,37 @@ h1{
 .mainheader{
   color: rgba(0,65,165,255);
 }
+/*Sections*/
+.aboutsec{
+  font-family: 'Victor Mono', monospace;
+}
+.donatesec{
+  font-family: 'Victor Mono', monospace;
+}
+/*Navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(236,242,253,255);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-family: 'Victor Mono', monospace;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(222, 231, 248);
+}
+
