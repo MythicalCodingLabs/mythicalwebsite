@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html>
+  <head>
+    
+    <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+    <title>Random News Gen</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mythicallabs" data-description="Support me on Buy me a coffee!" data-message="Help support our development" data-color="#2486f0" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+<script>
+  function mainprojects(){
+    window.location.href = "projects.html";
+  }
+  </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="mainprojects()">Projects 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://idlefactory.fun">Idle Factory Tycoon</a>
+      <a href="newsgen.html">News Gen</a>
+      <a href="boxclicker.html">Box Clicker</a>
+    </div>
+  </div> 
+</ul>
+</div>
+
+    <div class="mainGen">
+    <h1>Generate random news</h1>
+    <button class="appbtn" onclick="genNews()">Generate News</button>
+    <p id="output">Click the button and your generated news will appear here.</p>
+    </div>
+    
+    <br>
+    <div class="mainGen">
+    <h3>About</h3>
+    <p>This generator was made by Rainier Hughes, all for fun. If you like this generator consider growing the database by filling out this <a href="https://forms.gle/2vEpVyBpMyVx2nNX9">Google Form.</a> The generator works by picking phrases from a list and putting them together. The data is mostly from YOU!</p>
+    <p>Help maintain the site by donating! Every cent counts.</p><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="mythicallabs" data-color="#2486f0" data-emoji="💻"  data-font="Inter" data-text="Support our development" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+    </div>
+    
+    <br>
+    <div class="mainGen">
+    <h3>Save Data</h3>
+    <p>This is for our devs to save data (You dont need it but feel free to mess around)</p>
+    Are you dev? (Will turn on teach mode for devs)<input type="checkbox" id="dev" onclick="devCheck()"><br><br>
+    <button class="appbtn" onclick="printData()">Save Data (For Dev)</button>
+    <p id="data"></p>
+    </div>
+    <p>Help grow the AI by giving data on our <a href="https://forms.gle/2vEpVyBpMyVx2nNX9">Google form.</a> Site Visits <a><img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=mw46t6bphtag9bx1qwll3c34atx6qch7" border="0" title="free hit counter code" alt="free hit counter code"></a></p>
+  </body>
+  <script>
+    const open = ["Breaking news!", "This just in,"]
+    const person = ["Elon Musk", "Jeffery Bezozs","Albert Einstein", "Bill Nye","Chris Pratt", "Mickey Mouse", "Kevin Hart", "Joe Biden", "Michel Jackson", "Frosty The Snowman", "Blake Shelton", "The Red Power ranger", "Neil Armstrong", "Donald Trump", "Tom Holland", "Jeffery Dahmer", "Dwayne Johnson", "Will Smith", "Mark Zuckerburg"]
+    const action = ["eating", "hiding", "killing", "smelling", "smoking", "licking", "bowling with", "assulting", "kissing", "burning", "feeding", "drinking", "dropkicking", "painting", "sawing", "shooting", "trading", "watching", "sitting on", "destroying"]
+    const thing = ["a massive fish", "a person", "a packet of venna beef hot dogs", "an Epi Pen", "a small Gopher", "a knife", "lip balm", "The Declaration of Independence", "a Lemon", "a tube of Raspberry Flavored toothpaste", "a Stick of dynamite", "a chair", "a table", "a door", "an airplane", "a rifle", "a small child", "415 children", "a chromebook", "a sink", "a cheese wheel", "a bottle of hand sanitizer"]
+    const place = ["at vidcon.", "in a park.", "in his house.", "at a Mc Donald's.", "in Nantucket.", "in the Polar ice caps.", "at The US capital.", "in The Museum Of Science and Industry.", "in The Mall of America", "in The Death Star", "in a Hospital", "in a Gym", "in a Police station", "at Twitter Headquarters", "on amazon", "in a school", "at his local zoo", "in a daycare", "in alaska"]
+    const action2 = ["eat", "hide", "kill", "smell", "smoke", "lick", "bowl with", "assult", "kiss", "burn", "feed", "drink", "dropkick", "paint", "saw", "shoot", "trade", "sit", "destroy"]
+    const response = ['"Very odd."', '"I am permanently traumatized."', "I was scared for my life!", '"I just couldnt stop him!"', '"He was insane!"']
+    const good = []
+    const bad = [12043,10042,10344,97,65,14023,10042,732,2148,2082,88,11324,12020,11044,1088,1756,14123,1627,13143,14131,593]
+function genNews(){
+  var openIn = open.at(Math.floor(Math.random() * open.length))
+  var personIn = person.at(Math.floor(Math.random() * person.length))
+  var actionIn = action.at(Math.floor(Math.random() * action.length))
+  var thingIn = thing.at(Math.floor(Math.random() * thing.length))
+  var placeIn = place.at(Math.floor(Math.random() * place.length))
+  var actionIn2 = action2.at(Math.floor(Math.random() * action2.length))
+  var thingIn2 = thing.at(Math.floor(Math.random() * thing.length))
+  var responseIn = response.at(Math.floor(Math.random() * response.length))
+  var personIn2 = person.at(Math.floor(Math.random() * person.length))
+  if(bad.includes(open.indexOf(openIn) + "" + person.indexOf(personIn) + action.indexOf(actionIn) + thing.indexOf(thingIn) + place.indexOf(placeIn) + action.indexOf(actionIn2) + thing.indexOf(thingIn2) + response.indexOf(responseIn) + person.indexOf(personIn2))){
+   genNews()
+  }
+  else{
+    document.getElementById("output").innerHTML = openIn + " " + personIn + " was caught " + actionIn + " " + thingIn + " " + placeIn + " After " + "the suspect was caught, he proceeded to " + actionIn2 + " " + thingIn2 + ". We asked " + personIn2 + ", an innocent bystander, how they felt about the incident. He responded " + responseIn + ".";
+    if(document.getElementById('dev').checked){
+      alert(openIn + " " + personIn + " was caught " + actionIn + " " + thingIn + " " + placeIn + " After " + personIn + " was caught, he proceeded to " + actionIn2 + " " + thingIn2 + ". We asked " + personIn2 + ", an innocent bystander, how he felt about the incident. He responded " + responseIn + ".")
+      }
+  }
+  if(document.getElementById('dev').checked){
+  if(confirm("Good?")){
+    good.push(open.indexOf(openIn) + "" + person.indexOf(personIn) + action.indexOf(actionIn) + thing.indexOf(thingIn) + place.indexOf(placeIn) + action.indexOf(actionIn2) + thing.indexOf(thingIn2))
+  }
+  else{
+    bad.push(open.indexOf(openIn) + "" + person.indexOf(personIn) + action.indexOf(actionIn) + thing.indexOf(thingIn) + place.indexOf(placeIn) + action.indexOf(actionIn2) + thing.indexOf(thingIn2))
+  }
+}
+}
+function printData(){
+  document.getElementById("data").innerHTML = "Good data:" + "<br>" + good + "<br>" + "Bad data:" + "<br>" + bad;
+}
+  </script>
+  <style>
+    body{
+  background-color: #eaf0fd;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.mainGen{
+  background-color: rgba(11,120,238,255);
+  padding: 20px;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: rgba(0,19,218,255);
+}
+.appbtn{
+  border-color: rgba(0,19,218,255);
+  background-color: rgba(11,120,238,255);
+  border-radius: 25px;
+  border-style: solid;
+  padding: 5px;
+  font-size: 15px;
+}
+.appbtn:hover{
+  border-color: rgba(0,19,218,255);
+  background-color: rgba(6,75,229,255);
+  border-radius: 25px;
+  border-style: solid;
+  padding: 5px;
+  font-size: 15px;
+}
+
+
+  </style>
+</html>
