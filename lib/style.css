@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .mainbanner{
   text-align: center;
   background-color: rgba(236,242,253,255);
