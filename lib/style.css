@@ -112,4 +112,17 @@ li a:hover {
 .navbar{
   font-family: 'Victor Mono', monospace;
 }
-
+.comingsoontitle{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.comingsooncount{
+  text-align: center;
+}
+.comingsoonthing{
+  width: 20%;
+}
+footer{
+  float: bottom;
+}
