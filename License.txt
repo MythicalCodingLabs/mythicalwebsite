@@ -1,0 +1,46 @@
+Non-Commercial Code Snippet License Agreement
+
+This Code Snippet License Agreement ("Agreement") is entered into on 2023, by and between Rainier Hughes ("Licensor") and any person or entity ("Licensee") wishing to use the Code Snippets covered by this Agreement.
+
+1. License Grant
+
+  Subject to the terms and conditions of this Agreement, Licensor grants Licensee a non-exclusive, non-transferable, worldwide license to use, modify, and distribute the Code Snippets solely for non-commercial purposes, with the explicit restriction that the Code Snippets may not be used for any commercial or for-profit activities.
+
+2. Restrictions
+
+  a. Licensee shall not use the Code Snippets in a manner that directly or indirectly generates revenue, profits, or financial gain for themselves or any third party.
+
+  b. Licensee shall not sublicense, sell, rent, lease, or otherwise transfer the Code Snippets, in whole or in part, to any third party for any commercial purposes.
+
+  c. Licensee shall not remove, alter, or obscure any copyright notices, license information, or other proprietary notices contained within the Code Snippets.
+
+3. Ownership
+
+  Licensor retains all right, title, and interest in and to the Code Snippets. This Agreement does not convey any ownership rights to Licensee.
+
+4. Warranty and Liability
+
+  The Code Snippets are provided "as is" without any warranty, express or implied. Licensor shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use the Code Snippets.
+
+5. Termination
+
+  Licensor may terminate this Agreement if Licensee breaches any of its terms. Upon termination, Licensee shall cease all use of the Code Snippets and destroy any copies in their possession.
+
+6. Governing Law
+
+This Agreement shall be governed by and construed in accordance with the laws of [Your Jurisdiction].
+
+7. Entire Agreement
+
+  This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements, understandings, or representations.
+
+8. Execution
+
+  This Agreement may be executed by any Licensee who wishes to use the Code Snippets under its terms.
+
+  IN WITNESS WHEREOF, the parties have executed this Code Snippet License Agreement as of the date first above written.
+
+Rainier Hughes (Licensor)
+Name: Rainier Hughes
+Title: Founder
+Date: 2023
