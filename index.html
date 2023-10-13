@@ -15,30 +15,26 @@
      crossorigin="anonymous"></script>
      <link rel="icon" type="mythicalLogo.png" href="mythicalLogo.png" sizes="16x16">
   </head>
-  <body>
+  <body onload="load()">
     <!--Navbar Stuff-->
      <script>
   function mainprojects(){
     window.location.href = "projects";
   }
   </script>
-    <div class="navbar">
-      <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="speakingtime.html">Speaking Time</a></li>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="mainprojects()">Projects 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://idlefactory.fun">Idle Factory Tycoon</a>
-      <a href="newsgen.html">News Gen</a>
-      <a href="boxclicker.html">Box Clicker</a>
-    </div>
-  </div> 
-  <li><a href="webcomissions.html">Web Commissions</a></li>
-</ul>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <div id="main">
+    <button id="openBtn" class="openbtn" onclick="openNav()">&#9776;</button>
+  </div>
+  
+    <div id="navbarUpdate">
 </div>
 <!--End of navbar stuff-->
     <div class="mainbanner">
