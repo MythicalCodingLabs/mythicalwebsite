@@ -222,7 +222,7 @@ footer{
   .sidebar a {font-size: 18px;}
 }
   
- @media (max-width: 800px) {
+ @media (max-width: 801px) {
   ul{
     visibility: hidden;
     height: 0;
@@ -231,7 +231,7 @@ footer{
     visibility: visible;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   ul{
     visibility: visible;
   }
