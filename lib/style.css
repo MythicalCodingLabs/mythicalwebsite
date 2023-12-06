@@ -14,8 +14,8 @@ body {
 
 }
 html{
-  height: 100%;
   width: 100%;
+  padding-bottom: 40px;
 }
 html:fullscreen{
   height: 100%;
@@ -238,4 +238,21 @@ footer{
   .openbtn{
     visibility: hidden;
   }
+}
+.blogpost{
+  border-style: solid;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  border-color: rgb(48, 58, 112);
+  user-select: none;
+  cursor: pointer;
+}
+.blogpost:hover{
+  border-style: solid;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  border-color: rgb(48, 58, 112);
+  user-select: none;
+  cursor: pointer;
+  background-color: #e9e9e9;
 }

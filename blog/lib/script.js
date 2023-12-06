@@ -1,4 +1,4 @@
-const navbarCode = '<div class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="speakingtime.html">Speaking Time</a></li><div class="dropdown"><button class="dropbtn" onclick="mainprojects()">Projects <i class="fa fa-caret-down"></i></button><div class="dropdown-content"><a href="https://idlefactory.fun">Idle Factory Tycoon</a><a href="newsgen.html">News Gen</a><a href="boxclicker.html">Box Clicker</a></div></div><li><a href="blog.html">Blog</a></li></ul></div>'
+const navbarCode = '<div class="navbar"><ul><li><a href="/index.html">Home</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/speakingtime.html">Speaking Time</a></li><div class="dropdown"><button class="dropbtn" onclick="mainprojects()">Projects <i class="fa fa-caret-down"></i></button><div class="dropdown-content"><a href="https://idlefactory.fun">Idle Factory Tycoon</a><a href="/newsgen.html">News Gen</a><a href="/boxclicker.html">Box Clicker</a></div></div><li><a href="/blog.html">Blog</a></li></ul></div>'
 var navbarOpen = 0;
 var firsttime = 0;
 function load(){
