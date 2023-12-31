@@ -1,0 +1,1 @@
+I dont want your data. You will be reading and writing data to a sheet for storage purpouses.
